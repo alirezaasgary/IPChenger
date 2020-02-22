@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{463A46BB-07B6-47CD-B844-0979F8B6B489}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IPChanger</RootNamespace>
+    <AssemblyName>IPChanger</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>shuffle %284%29.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>IPChanger.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2019.1.219.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.GridView, Version=2019.1.219.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.RadDock, Version=2019.1.219.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.RichTextEditor, Version=2019.1.219.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.UI, Version=2019.1.219.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="TelerikCommon, Version=2019.1.219.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSource\foodsorder.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>foodsorder.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSource\Note.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Note.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSource\personel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>personel.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MahDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MahDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PapDBDataSet.cs">
+      <DependentUpon>PapDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PapDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PapDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\IAccountingRepository.cs" />
+    <Compile Include="Repository\ICompanyRepository.cs" />
+    <Compile Include="Repository\IPezeshkiRepository.cs" />
+    <Compile Include="Services\AccountingRepository.cs" />
+    <Compile Include="Services\CompanyRepository.cs" />
+    <Compile Include="Services\PasswordHelper.cs" />
+    <Compile Include="Services\PezeshkiRepository.cs" />
+    <Compile Include="Services\PublicVariabl.cs" />
+    <Compile Include="ShamsiDate.cs" />
+    <Compile Include="SubForms\CustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\CustomerForm.Designer.cs">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\frmCompanyGrouping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\frmCompanyGrouping.Designer.cs">
+      <DependentUpon>frmCompanyGrouping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\frmMdiDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\frmMdiDoc.Designer.cs">
+      <DependentUpon>frmMdiDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\frmPezeshki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\frmPezeshki.Designer.cs">
+      <DependentUpon>frmPezeshki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\frmSpBody.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\frmSpBody.Designer.cs">
+      <DependentUpon>frmSpBody.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tavalod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tavalod.Designer.cs">
+      <DependentUpon>Tavalod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TavalodDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TavalodDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="tell.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tell.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SubForms\CustomerForm.resx">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\frmCompanyGrouping.resx">
+      <DependentUpon>frmCompanyGrouping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\frmMdiDoc.resx">
+      <DependentUpon>frmMdiDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\frmPezeshki.resx">
+      <DependentUpon>frmPezeshki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\frmSpBody.resx">
+      <DependentUpon>frmSpBody.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tavalod.resx">
+      <DependentUpon>Tavalod.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSource\foodsorder.xsc">
+      <DependentUpon>foodsorder.xsd</DependentUpon>
+    </None>
+    <None Include="DataSource\foodsorder.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>foodsorder.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSource\foodsorder.xss">
+      <DependentUpon>foodsorder.xsd</DependentUpon>
+    </None>
+    <None Include="DataSource\Note.xsc">
+      <DependentUpon>Note.xsd</DependentUpon>
+    </None>
+    <None Include="DataSource\Note.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Note.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSource\Note.xss">
+      <DependentUpon>Note.xsd</DependentUpon>
+    </None>
+    <None Include="DataSource\personel.xsc">
+      <DependentUpon>personel.xsd</DependentUpon>
+    </None>
+    <None Include="DataSource\personel.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>personel.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSource\personel.xss">
+      <DependentUpon>personel.xsd</DependentUpon>
+    </None>
+    <None Include="MahDS.xsc">
+      <DependentUpon>MahDS.xsd</DependentUpon>
+    </None>
+    <None Include="MahDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MahDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="MahDS.xss">
+      <DependentUpon>MahDS.xsd</DependentUpon>
+    </None>
+    <None Include="PapDBDataSet.xsc">
+      <DependentUpon>PapDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PapDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PapDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PapDBDataSet.xss">
+      <DependentUpon>PapDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="TavalodDS.xsc">
+      <DependentUpon>TavalodDS.xsd</DependentUpon>
+    </None>
+    <None Include="TavalodDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TavalodDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TavalodDS.xss">
+      <DependentUpon>TavalodDS.xsd</DependentUpon>
+    </None>
+    <None Include="tell.xsc">
+      <DependentUpon>tell.xsd</DependentUpon>
+    </None>
+    <None Include="tell.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tell.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="tell.xss">
+      <DependentUpon>tell.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shuffle %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+    <None Include="Resources\check.png" />
+    <None Include="Resources\verified %281%29.png" />
+    <None Include="Resources\verified.png" />
+    <None Include="Resources\error %281%29.png" />
+    <None Include="Resources\error.png" />
+    <None Include="Resources\edit %281%29.png" />
+    <None Include="Resources\network %281%29.png" />
+    <None Include="Resources\network.png" />
+    <None Include="Resources\exe-file-black-rounded-rectangular-interface-symbol %281%29.png" />
+    <None Include="Resources\notepad.png" />
+    <None Include="Resources\user %281%29.png" />
+    <None Include="Resources\computer.png" />
+    <None Include="Resources\icon.png" />
+    <None Include="Resources\dustbin.png" />
+    <None Include="Resources\dustbin %281%29.png" />
+    <None Include="Resources\3438857.jpg" />
+    <None Include="Resources\passkey.png" />
+    <None Include="Resources\34388571.jpg" />
+    <Content Include="shuffle %284%29.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
