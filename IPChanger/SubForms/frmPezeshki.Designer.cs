@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
             this.radSplitButton1 = new Telerik.WinControls.UI.RadSplitButton();
             this.OW3 = new Telerik.WinControls.UI.RadMenuItem();
             this.OW2 = new Telerik.WinControls.UI.RadMenuItem();
             this.OW1 = new Telerik.WinControls.UI.RadMenuItem();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radSplitButton1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radSplitButton1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -68,37 +68,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1011, 44);
             this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.radGridView1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 53);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1011, 587);
-            this.panel2.TabIndex = 1;
-            // 
-            // radGridView1
-            // 
-            this.radGridView1.AllowShowFocusCues = true;
-            this.radGridView1.AutoGenerateHierarchy = true;
-            this.radGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radGridView1.EnableHotTracking = false;
-            this.radGridView1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radGridView1.Location = new System.Drawing.Point(0, 0);
-            // 
-            // 
-            // 
-            this.radGridView1.MasterTemplate.AllowAddNewRow = false;
-            this.radGridView1.MasterTemplate.AllowSearchRow = true;
-            this.radGridView1.MasterTemplate.AutoExpandGroups = true;
-            this.radGridView1.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            this.radGridView1.MasterTemplate.EnableAlternatingRowColor = true;
-            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition2;
-            this.radGridView1.Name = "radGridView1";
-            this.radGridView1.ReadOnly = true;
-            this.radGridView1.Size = new System.Drawing.Size(1011, 587);
-            this.radGridView1.TabIndex = 2;
             // 
             // radSplitButton1
             // 
@@ -132,6 +101,38 @@
             this.OW1.Text = "Owner 1";
             this.OW1.Click += new System.EventHandler(this.OW1_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.radGridView1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 53);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1011, 587);
+            this.panel2.TabIndex = 1;
+            // 
+            // radGridView1
+            // 
+            this.radGridView1.AllowShowFocusCues = true;
+            this.radGridView1.AutoGenerateHierarchy = true;
+            this.radGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radGridView1.EnableHotTracking = false;
+            this.radGridView1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radGridView1.Location = new System.Drawing.Point(0, 0);
+            // 
+            // 
+            // 
+            this.radGridView1.MasterTemplate.AllowAddNewRow = false;
+            this.radGridView1.MasterTemplate.AllowSearchRow = true;
+            this.radGridView1.MasterTemplate.AutoExpandGroups = true;
+            this.radGridView1.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+            this.radGridView1.MasterTemplate.EnableAlternatingRowColor = true;
+            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.radGridView1.Name = "radGridView1";
+            this.radGridView1.ReadOnly = true;
+            this.radGridView1.Size = new System.Drawing.Size(1011, 587);
+            this.radGridView1.TabIndex = 2;
+            this.radGridView1.ViewCellFormatting += new Telerik.WinControls.UI.CellFormattingEventHandler(this.radGridView1_ViewCellFormatting);
+            // 
             // frmPezeshki
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -146,10 +147,10 @@
             this.Load += new System.EventHandler(this.frmPezeshki_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.radSplitButton1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radSplitButton1)).EndInit();
             this.ResumeLayout(false);
 
         }

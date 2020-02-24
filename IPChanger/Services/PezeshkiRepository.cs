@@ -13,7 +13,7 @@ namespace IPChanger.Services
     {
         public DataTable SelectAll()
         {
-            string query = "SELECT ID,ServerIP,ServerName,Company,CompanyName,Domain,Owner,Version,IctOwner,IctOwnerTel,Note FROM dbo.ServerInfo ";
+            string query = "SELECT ID,ServerIP,ServerName,Company,CompanyName,Domain,Owner,Version,IctOwner,IctOwnerTel,Note FROM dbo.ServerInfo Order by company ";
           
             SqlConnection Connection = new SqlConnection(PublicVariabl.PEzeshki_ConnectionString);
             SqlDataAdapter adapter = new SqlDataAdapter(query, Connection);
@@ -24,7 +24,7 @@ namespace IPChanger.Services
 
         public DataTable SelectOwner1()
         {
-            string query = "SELECT ID,ServerIP,ServerName,Company,CompanyName,Domain,Owner,Version,IctOwner,IctOwnerTel,Note FROM dbo.ServerInfo  where Owner=1";
+            string query = "SELECT ID,ServerIP,ServerName,Company,CompanyName,Domain,Owner,Version,IctOwner,IctOwnerTel,Note FROM dbo.ServerInfo  where Owner=1  Order by company";
 
             SqlConnection Connection = new SqlConnection(PublicVariabl.PEzeshki_ConnectionString);
             SqlDataAdapter adapter = new SqlDataAdapter(query, Connection);
@@ -35,7 +35,7 @@ namespace IPChanger.Services
 
         public DataTable SelectOwner2()
         {
-            string query = "SELECT ID,ServerIP,ServerName,Company,CompanyName,Domain,Owner,Version,IctOwner,IctOwnerTel,Note FROM dbo.ServerInfo where Owner=2 ";
+            string query = "SELECT ID,ServerIP,ServerName,Company,CompanyName,Domain,Owner,Version,IctOwner,IctOwnerTel,Note FROM dbo.ServerInfo where Owner=2  Order by company";
 
             SqlConnection Connection = new SqlConnection(PublicVariabl.PEzeshki_ConnectionString);
             SqlDataAdapter adapter = new SqlDataAdapter(query, Connection);
@@ -46,7 +46,7 @@ namespace IPChanger.Services
 
         public DataTable SelectOwner3()
         {
-            string query = "SELECT ID,ServerIP,ServerName,Company,CompanyName,Domain,Owner,Version,IctOwner,IctOwnerTel,Note FROM dbo.ServerInfo where Owner=3 ";
+            string query = "SELECT ID,ServerIP,ServerName,Company,CompanyName,Domain,Owner,Version,IctOwner,IctOwnerTel,Note FROM dbo.ServerInfo where Owner=3  Order by company";
 
             SqlConnection Connection = new SqlConnection(PublicVariabl.PEzeshki_ConnectionString);
             SqlDataAdapter adapter = new SqlDataAdapter(query, Connection);
@@ -55,4 +55,5 @@ namespace IPChanger.Services
             return data;
         }
     }
+
 }

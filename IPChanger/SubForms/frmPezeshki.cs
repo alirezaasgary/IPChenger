@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Telerik.WinControls;
+using Telerik.WinControls.UI;
 
 namespace IPChanger.SubForms
 {
@@ -153,6 +155,19 @@ namespace IPChanger.SubForms
         private void radSplitButton1_Click(object sender, EventArgs e)
         {
             BindGridALL();
+        }
+
+        private void radGridView1_ViewCellFormatting(object sender, Telerik.WinControls.UI.CellFormattingEventArgs e)
+        {
+            if (e.CellElement is GridRowHeaderCellElement && e.Row is GridViewDataRowInfo)
+            {
+                e.CellElement.Text = (e.CellElement.RowIndex + 1).ToString();
+                e.CellElement.TextImageRelation = TextImageRelation.ImageBeforeText;
+            }
+            else
+            {
+                e.CellElement.ResetValue(LightVisualElement.TextImageRelationProperty, ValueResetFlags.Local);
+            }
         }
     }
 }
